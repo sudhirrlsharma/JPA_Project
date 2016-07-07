@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration >
+<session-factory >
+      <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+      <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test?autoReconnect=true</property>
+      <property name="hibernate.connection.username">root</property>
+      <property name="hibernate.connection.password">cybage@123</property>
+      <property name="hibernate.connection.pool_size">10</property>
+      <property name="hibernate.connection.autoReconnect">true</property>
+	  <property name="hibernate.connection.autoReconnectForPools">true</property><!--
+	  <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+	 <property name="hibernate.c3p0.acquire_increment">1</property>
+	 <property name="hibernate.c3p0.acquire_retry_attempts">0</property>
+	 <property name="hibernate.c3p0.acquire_retry_delay">0</property>
+     <property name="hibernate.c3p0.idle_test_period">14400</property>
+	 <property name="hibernate.c3p0.max_size">15</property>
+	 <property name="hibernate.c3p0.min_size">3</property>
+	 <property name="hibernate.c3p0.max_statements">0</property>
+	 <property name="hibernate.c3p0.timeout">10000</property>
+	 <property name="hibernate.c3p0.preferredTestQuery">select 1;</property>
+     --><property name="show_sql">true</property>
+     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+     <property name="hibernate.hbm2ddl.auto">create</property>
+     	 <property name="current_session_context_class">thread</property>
+     
+      <!-- Mapping files 
+     <mapping package="cybage.single.table.model"/>
+     <mapping class="cybage.single.table.model.User"/>
+     <mapping class="cybage.single.table.model.BillingDetail"/>
+     <mapping class="cybage.single.table.model.CreaditCard"/>
+     <mapping class="cybage.single.table.model.Address"/>
+     <mapping class="cybage.single.table.model.BankAccount"/>
+     -->
+</session-factory>
+</hibernate-configuration>

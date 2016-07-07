@@ -1,0 +1,37 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence" version="1.0">
+	<persistence-unit name="JPAService" transaction-type="RESOURCE_LOCAL">
+
+		<properties>
+			<property name="hibernate.ejb.cfgfile" value="hibernate.cfg.xml"/>
+		<!--	  
+	 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.connection.username" value="root"/>
+      <property name="hibernate.connection.password" value="cybage@123"/>
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/test?autoReconnect=true"/>
+      -->    
+      <!-- 
+      <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+	 <property name="hibernate.c3p0.acquire_increment">1</property>
+	 <property name="hibernate.c3p0.acquire_retry_attempts">0</property>
+	 <property name="hibernate.c3p0.acquire_retry_delay">0</property>
+     <property name="hibernate.c3p0.idle_test_period">14400</property>
+	 <property name="hibernate.c3p0.max_size">15</property>
+	 <property name="hibernate.c3p0.min_size">3</property>
+	 <property name="hibernate.c3p0.max_statements">0</property>
+	 <property name="hibernate.c3p0.timeout">10000</property>
+	 <property name="hibernate.c3p0.preferredTestQuery">select 1;</property>  -->
+	<!-- SQL stdout logging 
+		<property name="hibernate.show_sql" value="true" />
+		<property name="hibernate.format_sql" value="true" />
+		<property name="use_sql_comments" value="true" />-->
+
+<!-- Scan for annotated classes and Hibernate mapping XML
+files 
+<property name="hibernate.archive.autodetection" value="class, hbm" />--> 
+		</properties>
+	</persistence-unit>
+</persistence>
